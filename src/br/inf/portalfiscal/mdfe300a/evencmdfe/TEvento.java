@@ -1,10 +1,3 @@
-//
-// Este arquivo foi gerado pela Arquitetura JavaTM para ImplementaÁ„o de ReferÍncia (JAXB) de Bind XML, v2.2.8-b130911.1802 
-// Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// Todas as modificaÁıes neste arquivo ser„o perdidas apÛs a recompilaÁ„o do esquema de origem. 
-// Gerado em: 2021.08.11 ‡s 07:48:29 AM BRT 
-//
-
 
 package br.inf.portalfiscal.mdfe300a.evencmdfe;
 
@@ -25,7 +18,7 @@ import org.w3c.dom.Element;
  * 
  * <p>Classe Java de TEvento complex type.
  * 
- * <p>O seguinte fragmento do esquema especifica o conte˙do esperado contido dentro desta classe.
+ * <p>O seguinte fragmento do esquema especifica o conte√∫do esperado contido dentro desta classe.
  * 
  * <pre>
  * &lt;complexType name="TEvento">
@@ -50,7 +43,7 @@ import org.w3c.dom.Element;
  *                     &lt;simpleType>
  *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
  *                         &lt;whiteSpace value="preserve"/>
- *                         &lt;pattern value="[1-9][0-9]|0?[1-9]"/>
+ *                         &lt;pattern value="[0-9]{1,3}"/>
  *                       &lt;/restriction>
  *                     &lt;/simpleType>
  *                   &lt;/element>
@@ -66,11 +59,52 @@ import org.w3c.dom.Element;
  *                       &lt;/complexContent>
  *                     &lt;/complexType>
  *                   &lt;/element>
+ *                   &lt;element name="infSolicNFF" minOccurs="0">
+ *                     &lt;complexType>
+ *                       &lt;complexContent>
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           &lt;sequence>
+ *                             &lt;element name="xSolic">
+ *                               &lt;simpleType>
+ *                                 &lt;restriction base="{http://www.portalfiscal.inf.br/mdfe}TString">
+ *                                   &lt;minLength value="2"/>
+ *                                   &lt;maxLength value="2000"/>
+ *                                 &lt;/restriction>
+ *                               &lt;/simpleType>
+ *                             &lt;/element>
+ *                           &lt;/sequence>
+ *                         &lt;/restriction>
+ *                       &lt;/complexContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
+ *                   &lt;element name="infPAA" minOccurs="0">
+ *                     &lt;complexType>
+ *                       &lt;complexContent>
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           &lt;sequence>
+ *                             &lt;element name="CNPJPAA" type="{http://www.portalfiscal.inf.br/mdfe}TCnpj"/>
+ *                             &lt;element name="PAASignature">
+ *                               &lt;complexType>
+ *                                 &lt;complexContent>
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                     &lt;sequence>
+ *                                       &lt;element name="SignatureValue" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
+ *                                       &lt;element name="RSAKeyValue" type="{http://www.portalfiscal.inf.br/mdfe}TRSAKeyValueType"/>
+ *                                     &lt;/sequence>
+ *                                   &lt;/restriction>
+ *                                 &lt;/complexContent>
+ *                               &lt;/complexType>
+ *                             &lt;/element>
+ *                           &lt;/sequence>
+ *                         &lt;/restriction>
+ *                       &lt;/complexContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
  *                 &lt;/sequence>
  *                 &lt;attribute name="Id" use="required">
  *                   &lt;simpleType>
  *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}ID">
- *                       &lt;pattern value="ID[0-9]{52}"/>
+ *                       &lt;pattern value="ID[0-9]{52}|ID[0-9]{53}"/>
  *                     &lt;/restriction>
  *                   &lt;/simpleType>
  *                 &lt;/attribute>
@@ -103,7 +137,7 @@ public class TEvento {
     protected String versao;
 
     /**
-     * ObtÈm o valor da propriedade infEvento.
+     * Obt√©m o valor da propriedade infEvento.
      * 
      * @return
      *     possible object is
@@ -127,7 +161,7 @@ public class TEvento {
     }
 
     /**
-     * ObtÈm o valor da propriedade signature.
+     * Obt√©m o valor da propriedade signature.
      * 
      * @return
      *     possible object is
@@ -151,7 +185,7 @@ public class TEvento {
     }
 
     /**
-     * ObtÈm o valor da propriedade versao.
+     * Obt√©m o valor da propriedade versao.
      * 
      * @return
      *     possible object is
@@ -178,7 +212,7 @@ public class TEvento {
     /**
      * <p>Classe Java de anonymous complex type.
      * 
-     * <p>O seguinte fragmento do esquema especifica o conte˙do esperado contido dentro desta classe.
+     * <p>O seguinte fragmento do esquema especifica o conte√∫do esperado contido dentro desta classe.
      * 
      * <pre>
      * &lt;complexType>
@@ -198,7 +232,7 @@ public class TEvento {
      *           &lt;simpleType>
      *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
      *               &lt;whiteSpace value="preserve"/>
-     *               &lt;pattern value="[1-9][0-9]|0?[1-9]"/>
+     *               &lt;pattern value="[0-9]{1,3}"/>
      *             &lt;/restriction>
      *           &lt;/simpleType>
      *         &lt;/element>
@@ -214,11 +248,52 @@ public class TEvento {
      *             &lt;/complexContent>
      *           &lt;/complexType>
      *         &lt;/element>
+     *         &lt;element name="infSolicNFF" minOccurs="0">
+     *           &lt;complexType>
+     *             &lt;complexContent>
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                 &lt;sequence>
+     *                   &lt;element name="xSolic">
+     *                     &lt;simpleType>
+     *                       &lt;restriction base="{http://www.portalfiscal.inf.br/mdfe}TString">
+     *                         &lt;minLength value="2"/>
+     *                         &lt;maxLength value="2000"/>
+     *                       &lt;/restriction>
+     *                     &lt;/simpleType>
+     *                   &lt;/element>
+     *                 &lt;/sequence>
+     *               &lt;/restriction>
+     *             &lt;/complexContent>
+     *           &lt;/complexType>
+     *         &lt;/element>
+     *         &lt;element name="infPAA" minOccurs="0">
+     *           &lt;complexType>
+     *             &lt;complexContent>
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                 &lt;sequence>
+     *                   &lt;element name="CNPJPAA" type="{http://www.portalfiscal.inf.br/mdfe}TCnpj"/>
+     *                   &lt;element name="PAASignature">
+     *                     &lt;complexType>
+     *                       &lt;complexContent>
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                           &lt;sequence>
+     *                             &lt;element name="SignatureValue" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
+     *                             &lt;element name="RSAKeyValue" type="{http://www.portalfiscal.inf.br/mdfe}TRSAKeyValueType"/>
+     *                           &lt;/sequence>
+     *                         &lt;/restriction>
+     *                       &lt;/complexContent>
+     *                     &lt;/complexType>
+     *                   &lt;/element>
+     *                 &lt;/sequence>
+     *               &lt;/restriction>
+     *             &lt;/complexContent>
+     *           &lt;/complexType>
+     *         &lt;/element>
      *       &lt;/sequence>
      *       &lt;attribute name="Id" use="required">
      *         &lt;simpleType>
      *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}ID">
-     *             &lt;pattern value="ID[0-9]{52}"/>
+     *             &lt;pattern value="ID[0-9]{52}|ID[0-9]{53}"/>
      *           &lt;/restriction>
      *         &lt;/simpleType>
      *       &lt;/attribute>
@@ -239,7 +314,9 @@ public class TEvento {
         "dhEvento",
         "tpEvento",
         "nSeqEvento",
-        "detEvento"
+        "detEvento",
+        "infSolicNFF",
+        "infPAA"
     })
     public static class InfEvento {
 
@@ -261,13 +338,17 @@ public class TEvento {
         protected String nSeqEvento;
         @XmlElement(namespace = "http://www.portalfiscal.inf.br/mdfe", required = true)
         protected TEvento.InfEvento.DetEvento detEvento;
+        @XmlElement(namespace = "http://www.portalfiscal.inf.br/mdfe")
+        protected TEvento.InfEvento.InfSolicNFF infSolicNFF;
+        @XmlElement(namespace = "http://www.portalfiscal.inf.br/mdfe")
+        protected TEvento.InfEvento.InfPAA infPAA;
         @XmlAttribute(name = "Id", required = true)
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         @XmlID
         protected String id;
 
         /**
-         * ObtÈm o valor da propriedade cOrgao.
+         * Obt√©m o valor da propriedade cOrgao.
          * 
          * @return
          *     possible object is
@@ -291,7 +372,7 @@ public class TEvento {
         }
 
         /**
-         * ObtÈm o valor da propriedade tpAmb.
+         * Obt√©m o valor da propriedade tpAmb.
          * 
          * @return
          *     possible object is
@@ -315,7 +396,7 @@ public class TEvento {
         }
 
         /**
-         * ObtÈm o valor da propriedade cnpj.
+         * Obt√©m o valor da propriedade cnpj.
          * 
          * @return
          *     possible object is
@@ -339,7 +420,7 @@ public class TEvento {
         }
 
         /**
-         * ObtÈm o valor da propriedade cpf.
+         * Obt√©m o valor da propriedade cpf.
          * 
          * @return
          *     possible object is
@@ -363,7 +444,7 @@ public class TEvento {
         }
 
         /**
-         * ObtÈm o valor da propriedade chMDFe.
+         * Obt√©m o valor da propriedade chMDFe.
          * 
          * @return
          *     possible object is
@@ -387,7 +468,7 @@ public class TEvento {
         }
 
         /**
-         * ObtÈm o valor da propriedade dhEvento.
+         * Obt√©m o valor da propriedade dhEvento.
          * 
          * @return
          *     possible object is
@@ -411,7 +492,7 @@ public class TEvento {
         }
 
         /**
-         * ObtÈm o valor da propriedade tpEvento.
+         * Obt√©m o valor da propriedade tpEvento.
          * 
          * @return
          *     possible object is
@@ -435,7 +516,7 @@ public class TEvento {
         }
 
         /**
-         * ObtÈm o valor da propriedade nSeqEvento.
+         * Obt√©m o valor da propriedade nSeqEvento.
          * 
          * @return
          *     possible object is
@@ -459,7 +540,7 @@ public class TEvento {
         }
 
         /**
-         * ObtÈm o valor da propriedade detEvento.
+         * Obt√©m o valor da propriedade detEvento.
          * 
          * @return
          *     possible object is
@@ -483,7 +564,55 @@ public class TEvento {
         }
 
         /**
-         * ObtÈm o valor da propriedade id.
+         * Obt√©m o valor da propriedade infSolicNFF.
+         * 
+         * @return
+         *     possible object is
+         *     {@link TEvento.InfEvento.InfSolicNFF }
+         *     
+         */
+        public TEvento.InfEvento.InfSolicNFF getInfSolicNFF() {
+            return infSolicNFF;
+        }
+
+        /**
+         * Define o valor da propriedade infSolicNFF.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link TEvento.InfEvento.InfSolicNFF }
+         *     
+         */
+        public void setInfSolicNFF(TEvento.InfEvento.InfSolicNFF value) {
+            this.infSolicNFF = value;
+        }
+
+        /**
+         * Obt√©m o valor da propriedade infPAA.
+         * 
+         * @return
+         *     possible object is
+         *     {@link TEvento.InfEvento.InfPAA }
+         *     
+         */
+        public TEvento.InfEvento.InfPAA getInfPAA() {
+            return infPAA;
+        }
+
+        /**
+         * Define o valor da propriedade infPAA.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link TEvento.InfEvento.InfPAA }
+         *     
+         */
+        public void setInfPAA(TEvento.InfEvento.InfPAA value) {
+            this.infPAA = value;
+        }
+
+        /**
+         * Obt√©m o valor da propriedade id.
          * 
          * @return
          *     possible object is
@@ -510,7 +639,7 @@ public class TEvento {
         /**
          * <p>Classe Java de anonymous complex type.
          * 
-         * <p>O seguinte fragmento do esquema especifica o conte˙do esperado contido dentro desta classe.
+         * <p>O seguinte fragmento do esquema especifica o conte√∫do esperado contido dentro desta classe.
          * 
          * <pre>
          * &lt;complexType>
@@ -539,7 +668,7 @@ public class TEvento {
             protected String versaoEvento;
 
             /**
-             * ObtÈm o valor da propriedade any.
+             * Obt√©m o valor da propriedade any.
              * 
              * @return
              *     possible object is
@@ -563,7 +692,7 @@ public class TEvento {
             }
 
             /**
-             * ObtÈm o valor da propriedade versaoEvento.
+             * Obt√©m o valor da propriedade versaoEvento.
              * 
              * @return
              *     possible object is
@@ -584,6 +713,243 @@ public class TEvento {
              */
             public void setVersaoEvento(String value) {
                 this.versaoEvento = value;
+            }
+
+        }
+
+
+        /**
+         * <p>Classe Java de anonymous complex type.
+         * 
+         * <p>O seguinte fragmento do esquema especifica o conte√∫do esperado contido dentro desta classe.
+         * 
+         * <pre>
+         * &lt;complexType>
+         *   &lt;complexContent>
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *       &lt;sequence>
+         *         &lt;element name="CNPJPAA" type="{http://www.portalfiscal.inf.br/mdfe}TCnpj"/>
+         *         &lt;element name="PAASignature">
+         *           &lt;complexType>
+         *             &lt;complexContent>
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                 &lt;sequence>
+         *                   &lt;element name="SignatureValue" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
+         *                   &lt;element name="RSAKeyValue" type="{http://www.portalfiscal.inf.br/mdfe}TRSAKeyValueType"/>
+         *                 &lt;/sequence>
+         *               &lt;/restriction>
+         *             &lt;/complexContent>
+         *           &lt;/complexType>
+         *         &lt;/element>
+         *       &lt;/sequence>
+         *     &lt;/restriction>
+         *   &lt;/complexContent>
+         * &lt;/complexType>
+         * </pre>
+         * 
+         * 
+         */
+        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlType(name = "", propOrder = {
+            "cnpjpaa",
+            "paaSignature"
+        })
+        public static class InfPAA {
+
+            @XmlElement(name = "CNPJPAA", namespace = "http://www.portalfiscal.inf.br/mdfe", required = true)
+            protected String cnpjpaa;
+            @XmlElement(name = "PAASignature", namespace = "http://www.portalfiscal.inf.br/mdfe", required = true)
+            protected TEvento.InfEvento.InfPAA.PAASignature paaSignature;
+
+            /**
+             * Obt√©m o valor da propriedade cnpjpaa.
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
+             */
+            public String getCNPJPAA() {
+                return cnpjpaa;
+            }
+
+            /**
+             * Define o valor da propriedade cnpjpaa.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
+             */
+            public void setCNPJPAA(String value) {
+                this.cnpjpaa = value;
+            }
+
+            /**
+             * Obt√©m o valor da propriedade paaSignature.
+             * 
+             * @return
+             *     possible object is
+             *     {@link TEvento.InfEvento.InfPAA.PAASignature }
+             *     
+             */
+            public TEvento.InfEvento.InfPAA.PAASignature getPAASignature() {
+                return paaSignature;
+            }
+
+            /**
+             * Define o valor da propriedade paaSignature.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link TEvento.InfEvento.InfPAA.PAASignature }
+             *     
+             */
+            public void setPAASignature(TEvento.InfEvento.InfPAA.PAASignature value) {
+                this.paaSignature = value;
+            }
+
+
+            /**
+             * <p>Classe Java de anonymous complex type.
+             * 
+             * <p>O seguinte fragmento do esquema especifica o conte√∫do esperado contido dentro desta classe.
+             * 
+             * <pre>
+             * &lt;complexType>
+             *   &lt;complexContent>
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *       &lt;sequence>
+             *         &lt;element name="SignatureValue" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
+             *         &lt;element name="RSAKeyValue" type="{http://www.portalfiscal.inf.br/mdfe}TRSAKeyValueType"/>
+             *       &lt;/sequence>
+             *     &lt;/restriction>
+             *   &lt;/complexContent>
+             * &lt;/complexType>
+             * </pre>
+             * 
+             * 
+             */
+            @XmlAccessorType(XmlAccessType.FIELD)
+            @XmlType(name = "", propOrder = {
+                "signatureValue",
+                "rsaKeyValue"
+            })
+            public static class PAASignature {
+
+                @XmlElement(name = "SignatureValue", namespace = "http://www.portalfiscal.inf.br/mdfe", required = true)
+                protected byte[] signatureValue;
+                @XmlElement(name = "RSAKeyValue", namespace = "http://www.portalfiscal.inf.br/mdfe", required = true)
+                protected TRSAKeyValueType rsaKeyValue;
+
+                /**
+                 * Obt√©m o valor da propriedade signatureValue.
+                 * 
+                 * @return
+                 *     possible object is
+                 *     byte[]
+                 */
+                public byte[] getSignatureValue() {
+                    return signatureValue;
+                }
+
+                /**
+                 * Define o valor da propriedade signatureValue.
+                 * 
+                 * @param value
+                 *     allowed object is
+                 *     byte[]
+                 */
+                public void setSignatureValue(byte[] value) {
+                    this.signatureValue = value;
+                }
+
+                /**
+                 * Obt√©m o valor da propriedade rsaKeyValue.
+                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link TRSAKeyValueType }
+                 *     
+                 */
+                public TRSAKeyValueType getRSAKeyValue() {
+                    return rsaKeyValue;
+                }
+
+                /**
+                 * Define o valor da propriedade rsaKeyValue.
+                 * 
+                 * @param value
+                 *     allowed object is
+                 *     {@link TRSAKeyValueType }
+                 *     
+                 */
+                public void setRSAKeyValue(TRSAKeyValueType value) {
+                    this.rsaKeyValue = value;
+                }
+
+            }
+
+        }
+
+
+        /**
+         * <p>Classe Java de anonymous complex type.
+         * 
+         * <p>O seguinte fragmento do esquema especifica o conte√∫do esperado contido dentro desta classe.
+         * 
+         * <pre>
+         * &lt;complexType>
+         *   &lt;complexContent>
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *       &lt;sequence>
+         *         &lt;element name="xSolic">
+         *           &lt;simpleType>
+         *             &lt;restriction base="{http://www.portalfiscal.inf.br/mdfe}TString">
+         *               &lt;minLength value="2"/>
+         *               &lt;maxLength value="2000"/>
+         *             &lt;/restriction>
+         *           &lt;/simpleType>
+         *         &lt;/element>
+         *       &lt;/sequence>
+         *     &lt;/restriction>
+         *   &lt;/complexContent>
+         * &lt;/complexType>
+         * </pre>
+         * 
+         * 
+         */
+        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlType(name = "", propOrder = {
+            "xSolic"
+        })
+        public static class InfSolicNFF {
+
+            @XmlElement(namespace = "http://www.portalfiscal.inf.br/mdfe", required = true)
+            protected String xSolic;
+
+            /**
+             * Obt√©m o valor da propriedade xSolic.
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
+             */
+            public String getXSolic() {
+                return xSolic;
+            }
+
+            /**
+             * Define o valor da propriedade xSolic.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
+             */
+            public void setXSolic(String value) {
+                this.xSolic = value;
             }
 
         }

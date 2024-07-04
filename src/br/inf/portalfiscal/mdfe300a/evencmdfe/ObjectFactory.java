@@ -1,10 +1,3 @@
-//
-// Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
-// Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2021.08.11 às 07:48:29 AM BRT 
-//
-
 
 package br.inf.portalfiscal.mdfe300a.evencmdfe;
 
@@ -41,22 +34,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ReferenceType }
-     * 
-     */
-    public ReferenceType createReferenceType() {
-        return new ReferenceType();
-    }
-
-    /**
-     * Create an instance of {@link SignedInfoType }
-     * 
-     */
-    public SignedInfoType createSignedInfoType() {
-        return new SignedInfoType();
-    }
-
-    /**
      * Create an instance of {@link TEvento }
      * 
      */
@@ -73,6 +50,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link TEvento.InfEvento.InfPAA }
+     * 
+     */
+    public TEvento.InfEvento.InfPAA createTEventoInfEventoInfPAA() {
+        return new TEvento.InfEvento.InfPAA();
+    }
+
+    /**
      * Create an instance of {@link TRetEvento }
      * 
      */
@@ -81,19 +66,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link EvEncMDFe }
+     * Create an instance of {@link ReferenceType }
      * 
      */
-    public EvEncMDFe createEvEncMDFe() {
-        return new EvEncMDFe();
+    public ReferenceType createReferenceType() {
+        return new ReferenceType();
     }
 
     /**
-     * Create an instance of {@link TProcEvento }
+     * Create an instance of {@link SignedInfoType }
      * 
      */
-    public TProcEvento createTProcEvento() {
-        return new TProcEvento();
+    public SignedInfoType createSignedInfoType() {
+        return new SignedInfoType();
     }
 
     /**
@@ -145,6 +130,62 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link EvEncMDFe }
+     * 
+     */
+    public EvEncMDFe createEvEncMDFe() {
+        return new EvEncMDFe();
+    }
+
+    /**
+     * Create an instance of {@link TRSAKeyValueType }
+     * 
+     */
+    public TRSAKeyValueType createTRSAKeyValueType() {
+        return new TRSAKeyValueType();
+    }
+
+    /**
+     * Create an instance of {@link TProcEvento }
+     * 
+     */
+    public TProcEvento createTProcEvento() {
+        return new TProcEvento();
+    }
+
+    /**
+     * Create an instance of {@link TEvento.InfEvento.DetEvento }
+     * 
+     */
+    public TEvento.InfEvento.DetEvento createTEventoInfEventoDetEvento() {
+        return new TEvento.InfEvento.DetEvento();
+    }
+
+    /**
+     * Create an instance of {@link TEvento.InfEvento.InfSolicNFF }
+     * 
+     */
+    public TEvento.InfEvento.InfSolicNFF createTEventoInfEventoInfSolicNFF() {
+        return new TEvento.InfEvento.InfSolicNFF();
+    }
+
+    /**
+     * Create an instance of {@link TEvento.InfEvento.InfPAA.PAASignature }
+     * 
+     */
+    public TEvento.InfEvento.InfPAA.PAASignature createTEventoInfEventoInfPAAPAASignature() {
+        return new TEvento.InfEvento.InfPAA.PAASignature();
+    }
+
+    /**
+     * Create an instance of {@link TRetEvento.InfEvento }
+     * 
+     */
+    public TRetEvento.InfEvento createTRetEventoInfEvento() {
+        return new TRetEvento.InfEvento();
+    }
+
+    /**
      * Create an instance of {@link ReferenceType.DigestMethod }
      * 
      */
@@ -166,22 +207,6 @@ public class ObjectFactory {
      */
     public SignedInfoType.SignatureMethod createSignedInfoTypeSignatureMethod() {
         return new SignedInfoType.SignatureMethod();
-    }
-
-    /**
-     * Create an instance of {@link TEvento.InfEvento.DetEvento }
-     * 
-     */
-    public TEvento.InfEvento.DetEvento createTEventoInfEventoDetEvento() {
-        return new TEvento.InfEvento.DetEvento();
-    }
-
-    /**
-     * Create an instance of {@link TRetEvento.InfEvento }
-     * 
-     */
-    public TRetEvento.InfEvento createTRetEventoInfEvento() {
-        return new TRetEvento.InfEvento();
     }
 
     /**

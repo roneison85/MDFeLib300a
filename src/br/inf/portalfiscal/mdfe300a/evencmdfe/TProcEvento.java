@@ -1,10 +1,3 @@
-//
-// Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
-// Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2021.08.11 às 07:48:29 AM BRT 
-//
-
 
 package br.inf.portalfiscal.mdfe300a.evencmdfe;
 
@@ -20,7 +13,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * <p>Classe Java de TProcEvento complex type.
  * 
- * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
+ * <p>O seguinte fragmento do esquema especifica o conteÃºdo esperado contido dentro desta classe.
  * 
  * <pre>
  * &lt;complexType name="TProcEvento">
@@ -68,7 +61,7 @@ public class TProcEvento {
     protected String dhConexao;
 
     /**
-     * Obtém o valor da propriedade eventoMDFe.
+     * ObtÃ©m o valor da propriedade eventoMDFe.
      * 
      * @return
      *     possible object is
@@ -92,7 +85,7 @@ public class TProcEvento {
     }
 
     /**
-     * Obtém o valor da propriedade retEventoMDFe.
+     * ObtÃ©m o valor da propriedade retEventoMDFe.
      * 
      * @return
      *     possible object is
@@ -116,7 +109,7 @@ public class TProcEvento {
     }
 
     /**
-     * Obtém o valor da propriedade versao.
+     * ObtÃ©m o valor da propriedade versao.
      * 
      * @return
      *     possible object is
@@ -140,7 +133,7 @@ public class TProcEvento {
     }
 
     /**
-     * Obtém o valor da propriedade ipTransmissor.
+     * ObtÃ©m o valor da propriedade ipTransmissor.
      * 
      * @return
      *     possible object is
@@ -164,7 +157,7 @@ public class TProcEvento {
     }
 
     /**
-     * Obtém o valor da propriedade nPortaCon.
+     * ObtÃ©m o valor da propriedade nPortaCon.
      * 
      * @return
      *     possible object is
@@ -188,7 +181,7 @@ public class TProcEvento {
     }
 
     /**
-     * Obtém o valor da propriedade dhConexao.
+     * ObtÃ©m o valor da propriedade dhConexao.
      * 
      * @return
      *     possible object is

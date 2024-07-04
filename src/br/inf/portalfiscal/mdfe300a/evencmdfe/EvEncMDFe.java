@@ -1,10 +1,3 @@
-//
-// Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
-// Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2021.08.11 às 07:48:29 AM BRT 
-//
-
 
 package br.inf.portalfiscal.mdfe300a.evencmdfe;
 
@@ -18,7 +11,7 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * <p>Classe Java de anonymous complex type.
  * 
- * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
+ * <p>O seguinte fragmento do esquema especifica o conteÃºdo esperado contido dentro desta classe.
  * 
  * <pre>
  * &lt;complexType>
@@ -37,6 +30,13 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="dtEnc" type="{http://www.portalfiscal.inf.br/mdfe}TData"/>
  *         &lt;element name="cUF" type="{http://www.portalfiscal.inf.br/mdfe}TCodUfIBGE_EX"/>
  *         &lt;element name="cMun" type="{http://www.portalfiscal.inf.br/mdfe}TCodMunIBGE"/>
+ *         &lt;element name="indEncPorTerceiro" minOccurs="0">
+ *           &lt;simpleType>
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *               &lt;enumeration value="1"/>
+ *             &lt;/restriction>
+ *           &lt;/simpleType>
+ *         &lt;/element>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -51,7 +51,8 @@ import javax.xml.bind.annotation.XmlType;
     "nProt",
     "dtEnc",
     "cuf",
-    "cMun"
+    "cMun",
+    "indEncPorTerceiro"
 })
 @XmlRootElement(name = "evEncMDFe", namespace = "http://www.portalfiscal.inf.br/mdfe")
 public class EvEncMDFe {
@@ -66,9 +67,11 @@ public class EvEncMDFe {
     protected String cuf;
     @XmlElement(namespace = "http://www.portalfiscal.inf.br/mdfe", required = true)
     protected String cMun;
+    @XmlElement(namespace = "http://www.portalfiscal.inf.br/mdfe")
+    protected String indEncPorTerceiro;
 
     /**
-     * Obtém o valor da propriedade descEvento.
+     * ObtÃ©m o valor da propriedade descEvento.
      * 
      * @return
      *     possible object is
@@ -92,7 +95,7 @@ public class EvEncMDFe {
     }
 
     /**
-     * Obtém o valor da propriedade nProt.
+     * ObtÃ©m o valor da propriedade nProt.
      * 
      * @return
      *     possible object is
@@ -116,7 +119,7 @@ public class EvEncMDFe {
     }
 
     /**
-     * Obtém o valor da propriedade dtEnc.
+     * ObtÃ©m o valor da propriedade dtEnc.
      * 
      * @return
      *     possible object is
@@ -140,7 +143,7 @@ public class EvEncMDFe {
     }
 
     /**
-     * Obtém o valor da propriedade cuf.
+     * ObtÃ©m o valor da propriedade cuf.
      * 
      * @return
      *     possible object is
@@ -164,7 +167,7 @@ public class EvEncMDFe {
     }
 
     /**
-     * Obtém o valor da propriedade cMun.
+     * ObtÃ©m o valor da propriedade cMun.
      * 
      * @return
      *     possible object is
@@ -185,6 +188,30 @@ public class EvEncMDFe {
      */
     public void setCMun(String value) {
         this.cMun = value;
+    }
+
+    /**
+     * ObtÃ©m o valor da propriedade indEncPorTerceiro.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getIndEncPorTerceiro() {
+        return indEncPorTerceiro;
+    }
+
+    /**
+     * Define o valor da propriedade indEncPorTerceiro.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setIndEncPorTerceiro(String value) {
+        this.indEncPorTerceiro = value;
     }
 
 }
